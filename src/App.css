@@ -7,3 +7,142 @@ body {
     padding: 0;
     margin: 0;
 }
+
+* {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Quiz {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.QuizBlock {
+    position: relative;
+    width: 500px;
+    height: auto;
+    border: 1px solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+
+.Progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: gray;
+}
+
+.Bar {
+    height: 6px;
+    width: 0%;
+    background-image: linear-gradient(340deg, hsl(115, 93%, 58%) 13%, hsl(115deg 80% 66%) 50%, hsl(114, 70%, 69%) 99%);
+    transition: 0.5s linear;
+}
+
+.QuizTop span {
+    color: red;
+    padding: 4px;
+    background-color: aliceblue;
+}
+
+.QuestionTitle {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: rgb(255, 226, 110);
+    text-align: center;
+}
+
+.QuizList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    filter: drop-shadow(2px 2px 2px);
+}
+
+.QuizVariant {
+    width: 100%;
+    text-align: center;
+    border: 0.2px solid;
+    border-radius: 5px;
+    padding: 16px;
+    background-color: cornsilk;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.QuizVariant:hover {
+    transform: scale(1.05);
+    background-color: aqua;
+}
+
+.QuizResultImg {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.QuizResultText {
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.QuizResultLink {
+    color: #000;
+    font-size: 19px;
+    text-align: center;
+}
+
+@media screen and (max-width: 530px) {
+    .QuizBlock {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .QuizBlock {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .QuizBlock {
+        width: 260px;
+    }
+    .QuestionTitle {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .QuizBlock {
+        width: 230px;
+    }
+    .QuizVariant {
+        font-size: 13px;
+    }
+    .QuizResultImg {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .QuizBlock {
+        width: 200px;
+    }
+}

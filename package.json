@@ -1,7 +1,16 @@
 {
   "name": "quiz",
   "version": "0.1.0",
-  "private": true,
+  "description": "Simple React quiz made by Alexander Kuznecov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexkuznecov16/SimpleQuiz.git"
+  },
+  "author": {
+    "name": "Alexander Kuznecov",
+    "email": "alexander.kuznecov16@gmail.com"
+  },
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

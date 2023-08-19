@@ -1,40 +1,60 @@
 import './App.css';
+import React from 'react';
+import Game from './Components/Game';
+import Result from './Components/Result';
 
 function App() {
     const QuizData = [
         {
-            question: '1 question',
-            variants: ['1', '2', '3', '4'],
-            correct: 0,
+            question: 'The largest country in the world?',
+            variants: ['USA', 'China', 'Russia', 'Africa'],
+            correct: 2,
         },
         {
-            question: '2 question',
-            variants: ['4', '3', '2', '1'],
-            correct: 0,
+            question: 'The most used language on the internet?',
+            variants: ['Russian', 'English', 'German', 'Spanish'],
+            correct: 1,
         },
         {
-            question: '3 question',
-            variants: ['1', '2', '3', '4'],
-            correct: 0,
+            question: 'The most difficult language in the world?',
+            variants: ['Japanese', 'Arabic', 'Korean', 'Mandarin'],
+            correct: 3,
         },
         {
-            question: '4 question',
-            variants: ['1', '2', '3', '4'],
-            correct: 0,
+            question: 'The most used programming language',
+            variants: ['Python', 'C++', 'JavaScript', 'Java'],
+            correct: 2,
         },
         {
-            question: '5 question',
-            variants: ['4', '3', '2', '1'],
-            correct: 0,
+            question: 'HTML is?',
+            variants: ['Holographic Text Manipulation Lingo', 'Human-Transforming Magical Language', 'Hyper Text Markup Language', 'Hyperdimensional Template Management Lexicon'],
+            correct: 2,
         },
     ];
+
+    const [step, setStep] = React.useState(0);
+    const [score, setScore] = React.useState(0);
+    const [bar, setBar] = React.useState(0);
+
+    const onClickAnswer = (variantIndex) => {
+        if (variantIndex == QuizData[step].correct) {
+            setScore(score + 1);
+            console.log('Correct!!!');
+        }
+        const newStep = step + 1;
+        const newBar = Math.round((newStep / QuizData.length) * 100);
+        setBar(newBar);
+        setStep(newStep);
+    };
+
     return (
         <div className='Quiz'>
             <div className='QuizBlock'>
-                <div className='Progress-bar'>
-                    <div className='Bar'></div>
-                </div>
-                <h1 className='QuestionTitle'></h1>
+            {step < QuizData.length ? (
+                <Game bar={bar} step={step} QuizData={QuizData} onClickAnswer={onClickAnswer} />
+            ) : (
+                <Result score={score} QuizData={QuizData} />
+            )}
             </div>
         </div>
     );

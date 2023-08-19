@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Quiz App! This application lets users answer a series of quiz questions and provides a final score at the end.
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+### App.js
 
-### `npm start`
+This is the main entry point of the application. It manages the state of the quiz and renders either the `Game` component or the `Result` component based on the user's progress.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Game.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `Game` component displays the quiz questions, tracks user progress, and handles user interactions. It receives props such as `bar`, `step`, `QuizData`, and `onClickAnswer`.
 
-### `npm test`
+### Result.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The `Result` component displays the user's final score and a corresponding image based on the score. It receives props such as `score` and `QuizData`.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository to your local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+git clone https://github.com/alexkuznecov16/SimpleQuiz.git
+cd SimpleQuiz
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+arduino
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies using npm or yarn:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+markdown
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+3. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+less
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to see the quiz app in action.
 
-### Analyzing the Bundle Size
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+quiz-app/
+├── src/
+│ ├── Components/
+│ │ ├── App.js
+│ │ ├── Game.js
+│ │ ├── Result.js
+│ │ └── ...
+│ ├── Images/
+│ │ ├── cry.png
+│ │ ├── WTF.png
+│ │ ├── normal.png
+│ │ ├── smile.png
+│ │ ├── excellent.png
+│ │ └── ...
+│ ├── App.css
+│ └── index.js
+├── README.md
+├── package.json
+└── ...
 
-### Making a Progressive Web App
+markdown
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- React
+- JSX
+- HTML
+- CSS
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are welcome! Feel free to submit issues and pull requests.
 
-### `npm run build` fails to minify
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to reach out if you have any questions or suggestions:
+
+- Email: alexander.kuznecov16@gmail.com
+- Telegram: [@kznws](https://t.me/kznws)
