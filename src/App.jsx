@@ -49,7 +49,7 @@ function App() {
 
     return (
         <div className='Quiz'>
-            <div className='QuizBlock'>{step < QuizData.length ? <Game bar={bar} step={step} QuizData={QuizData} onClickAnswer={onClickAnswer} /> : <Result score={score} QuizData={QuizData} />}</div>
+            <div className='QuizBlock'>{step < QuizData.length ? <Game bar={bar} step={step} QuizData={QuizData} onClickAnswer={onClickAnswer} /> : <Result data-testid='result' score={score} QuizData={QuizData} />}</div>
         </div>
     );
 }

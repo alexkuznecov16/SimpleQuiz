@@ -20,7 +20,7 @@ function Result({ score, QuizData }) {
     const smilesImg = smileImages[score];
     return (
         <>
-            <img className='QuizResultImg' src={smilesImg} alt={smileImages[score]} />
+            <img className='QuizResultImg' src={smilesImg} alt={smileImages[score]} data-testid='result-image' />
             <span className='QuizResultText'>
                 Your score is {score} of {QuizData.length}.
             </span>

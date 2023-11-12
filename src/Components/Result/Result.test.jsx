@@ -15,6 +15,14 @@ describe('Result component check', () => {
         { question: 'The most used programming language', variants: ['Python', 'C++', 'JavaScript', 'Java'], correct: 2 },
         { question: 'HTML is?', variants: ['Holographic Text Manipulation Lingo', 'Human-Transforming Magical Language', 'Hyper Text Markup Language', 'Hyperdimensional Template Management Lexicon'], correct: 2 },
     ];
+
+    it('Result renders', () => {
+        render(<Result QuizData={QuizData} score={0} />);
+
+        const resultElement = screen.getByTestId('result-image'); // Добавьте атрибут data-testid="result" к компоненту Result
+        expect(resultElement).toBeInTheDocument();
+    });
+
     // Function which test our result component where score is 0;
     it('Results is 0', () => {
         render(<Result score={0} QuizData={QuizData} />);
