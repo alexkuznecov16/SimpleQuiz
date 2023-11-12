@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import Game from './Components/Game';
-import Result from './Components/Result';
+import Game from './Components/Game/Game';
+import Result from './Components/Result/Result';
 
 function App() {
     const QuizData = [
@@ -49,13 +49,7 @@ function App() {
 
     return (
         <div className='Quiz'>
-            <div className='QuizBlock'>
-            {step < QuizData.length ? (
-                <Game bar={bar} step={step} QuizData={QuizData} onClickAnswer={onClickAnswer} />
-            ) : (
-                <Result score={score} QuizData={QuizData} />
-            )}
-            </div>
+            <div className='QuizBlock'>{step < QuizData.length ? <Game bar={bar} step={step} QuizData={QuizData} onClickAnswer={onClickAnswer} /> : <Result score={score} QuizData={QuizData} />}</div>
         </div>
     );
 }
