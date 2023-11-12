@@ -69,3 +69,4 @@ describe('Result component check', () => {
         expect(imageElement).toBeInTheDocument();
     });
 });
+///////////////////////////////////////////////////////////////////////////////////////
